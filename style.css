@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0C2340;
+    padding: 15px 30px;
+    color: white;
+}
+
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-title {
+    align-items: center;
+    margin: 0;
+    display: inline-block;
+}
+
+footer {
+    background-color: #0C2340;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+    color: white;
+}
+
+#title {
+    margin: 0;
+}
