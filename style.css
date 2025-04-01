@@ -85,22 +85,6 @@ main {
   background-color: var(--navblue);
 }
 
-.card-text > div {
-  margin-bottom: 1rem;
-}
-
-.card-text button {
-  color: var(--white);
-}
-
-.card-text button.clicked {
-  color: var(--gold);
-}
-
-.card-text button:hover {
-  color: var(--gold);
-}
-
 .card-text .material-symbols-outlined {
   font-size: 5rem;
   font-variation-settings: 'wght' 200;
@@ -110,10 +94,19 @@ main {
   color: var(--white);
 }
 
+.card-text button {
+  color: var(--white);
+}
+
+.card-text button:hover {
+  color: var(--gold);
+}
+
 .card-items {
   display: flex;
   justify-content: space-between;
   align-items: right;
+  margin-bottom: 1rem;
 }
 
 .card-items > :first-child {
