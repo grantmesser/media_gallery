@@ -1,13 +1,22 @@
+:root {
+    --white: #FAF3F3;
+    --navblue: #0C2340;
+    --gold: #AE9142;
+    --green: #00843D;
+}
+
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--gold);
+    height: 100vh;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0C2340;
+    background: var(--navblue);
     padding: 15px 30px;
     color: white;
 }
@@ -26,7 +35,7 @@ nav a {
 }
 
 footer {
-    background-color: #0C2340;
+    background-color: var(--navblue);
     display: flex;
     justify-content: space-evenly;
     margin-left: auto;
@@ -37,4 +46,202 @@ footer {
 
 #title {
     margin: 0;
+}
+
+#trigram {
+  display: none;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr;
+  grid-gap: 1.5rem;
+  margin: 2rem 2vw;
+}
+
+.card {
+  border-radius: 10px;
+  min-width: 22rem;
+  align-self: start;
+}
+
+.card-img {
+  position: relative;
+  height: 24rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.card-img > img {
+  border-radius: 7px 7px 0 0;
+}
+
+.card-text {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--navblue);
+}
+
+.card-text > div {
+  margin-bottom: 1rem;
+}
+
+.card-text button {
+  color: var(--white);
+}
+
+.card-text button.clicked {
+  color: var(--gold);
+}
+
+.card-text button:hover {
+  color: var(--gold);
+}
+
+.card-text .material-symbols-outlined {
+  font-size: 5rem;
+  font-variation-settings: 'wght' 200;
+}
+
+.card-text h3 {
+  color: var(--white);
+}
+
+.card-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+.card-items > :first-child {
+  margin-right: auto;
+}
+
+.card-text .card-items {
+  margin-bottom: 0;
+}
+
+.hero {
+    position: relative; 
+    padding: 0;
+  }
+  
+.hero-img {
+    padding: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.hero-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
+    text-shadow: -1px -1px 0px rgba(0,0,0,0.8),
+                 1px -1px 0px rgba(0,0,0,0.8),
+                 -1px 1px 0px rgba(0,0,0,0.8),
+                 1px 1px 0px rgba(0,0,0,0.8);
+}
+
+.hero-text h1 {
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 1.1;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.hero-text p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+.prev {
+    padding: 5rem 3rem;
+    position: absolute; 
+    top: 50%; 
+    left: 0rem;
+    transform: translateY(-50%);
+    width: auto; 
+    font-size: 200%;
+    border-radius: 0 2rem 2rem 0; 
+    user-select: none; 
+    color: white;
+}
+
+.next {
+    right: 0rem; 
+    border-radius: 2rem 0 0 2rem; 
+    padding: 5rem 3rem;
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%);
+    width: auto; 
+    font-size: 250%;
+    user-select: none; 
+    color:white;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(2, 2, 2, 0.208); 
+}
+
+button {
+    background: none;
+    border: 0;
+}
+
+.dot-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    bottom: 3.2rem;
+}
+
+.dot {
+    background-color: rgba(255,255,255,.6);
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 1.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot:hover {
+    background-color: rgba(255,255,255,1);
+}
+
+.dot:first-child {
+    margin-left: 0;
+} 
+
+
+  
+@media screen and (min-width: 550px) {
+    main{grid-template-columns:repeat(2, 1fr);}
+}
+
+@media screen and (min-width: 768px) {
+    main{grid-template-columns:repeat(3, 1fr);}
+    aside p {column-count: 2;}
+}
+
+@media screen and (min-width: 1080px) {
+    main{grid-template-columns:repeat(4, 1fr);}
+}
+
+@media screen and (max-width: 767px) {
+    .nav-items {display: none;}
+    #trigram {
+      display:inherit;
+      justify-self: end;
+      transform:scale(2.5);
+    }
 }
