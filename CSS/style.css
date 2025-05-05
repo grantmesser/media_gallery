@@ -120,7 +120,7 @@ main {
 .hero {
     position: relative; 
     padding: 0;
-    height: 530px;
+    height: 550px;
     overflow: hidden;
   }
   
@@ -223,13 +223,13 @@ button {
     margin-left: 0;
 } 
 
-.position {
-  color: white;
-}
-
 .info {
   display: none;
   transition: all 0.3s ease-in-out;
+}
+
+.info p {
+  color: white;
 }
   
 @media screen and (min-width: 550px) {
