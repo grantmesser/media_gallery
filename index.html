@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Gallery</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200..300" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet">
-    <link rel="stylesheet" href="./modnorm.min.css">
+    <link href="./CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/modnorm.min.css">
 </head>
 <body>
     <nav>
@@ -22,20 +22,22 @@
     </nav>
     <section class="hero">
         <figure class="hero-img">
-          <img src="./Images/NotreDameStadium.webp"/>
+          <img src="./Hero/NotreDameStadium.webp" class="slides"/>
+          <img src="./Hero/stadiumpic2.jpg" class="slides"/>
+          <img src="./Hero/stadiumpic3.jpg" class="slides"/>
           <figcaption class="hero-text">
             <h1>Play Like A Champion Today <h1r>
             <p>Notre Dame Football</p>
           </figcaption>
         </figure>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+        <button class="prev" onclick="nextScreen()">&#10094;</button>
+        <button class="next" onclick="prevScreen()">&#10095;</button>
         <div class="dot-wrap">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+          <div class="dot" onclick="setScreen(1)"></div>
+          <div class="dot" onclick="setScreen(2)"></div>
+          <div class="dot" onclick="setScreen(3)"></div>
+          <div class="dot" onclick="setScreen(4)"></div>
+          <div class="dot" onclick="setScreen(5)"></div>
         </div>
       </section>
       <main>
@@ -46,8 +48,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Jeremiyah Love</h3>
-              <a href="https://www.instagram.com/jeremiyahlove/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/jeremiyahlove/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: RB</p>
             </div>
           </div>
         </article>
@@ -58,8 +63,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Ben Morrison</h3>
-              <a href="https://www.instagram.com/benmorrison/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/benmorrison/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: CB</p>
             </div>
           </div>
         </article>
@@ -70,8 +78,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Riley Leonard</h3>
-              <a href="https://www.instagram.com/riley.jleonard/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/riley.jleonard/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: QB</p>
             </div>
           </div>
         </article>
@@ -82,8 +93,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Xavier Watts</h3>
-              <a href="https://www.instagram.com/xavier.watts/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/xavier.watts/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: S</p>
             </div>
           </div>
         </article>
@@ -94,8 +108,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Howard Cross</h3>
-              <a href="https://www.instagram.com/howard_cross56/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/howard_cross56/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: DT</p>
             </div>
           </div>
         </article>
@@ -106,8 +123,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Rylie Mills</h3>
-              <a href="https://www.instagram.com/ryliemills/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/ryliemills/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: DT</p>
             </div>
           </div>
         </article>
@@ -118,8 +138,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Jack Kiser</h3>
-              <a href="https://www.instagram.com/jbkiser4/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/jbkiser4/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: LB</p>
             </div>
           </div>
         </article>
@@ -130,8 +153,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Jordan Faison</h3>
-              <a href="https://www.instagram.com/jordan.faison6/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/jordan.faison6/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: WR</p>
             </div>
           </div>
         </article>
@@ -142,8 +168,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Jaden Greathouse</h3>
-              <a href="https://www.instagram.com/jadengreathouse9/?hl=en"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/jadengreathouse9/?hl=en"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: WR</p>
             </div>
           </div>
         </article>
@@ -154,8 +183,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Mitchell Evans</h3>
-              <a href="https://www.instagram.com/mitch88evans/"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/mitch88evans/"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: TE</p>
             </div>
           </div>
         </article>
@@ -166,8 +198,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Leonard Moore</h3>
-              <a href="https://www.instagram.com/leonardmoore/"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/leonardmoore/"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: CB</p>
             </div>
           </div>
         </article>
@@ -178,8 +213,11 @@
           <div class="card-text">
             <div class="card-items">
               <h3>Christian Gray</h3>
-              <a href="https://www.instagram.com/_.franchise8/"><button title="Social" class="material-symbols-outlined more">person</button> </a>
+              <a href="https://www.instagram.com/_.franchise8/"><button title="Social" class="material-symbols-outlined">person</button> </a>
               <button title="More" class="material-symbols-outlined more">arrow_drop_down</button>
+            </div>
+            <div class="info">
+              <p class="position">Position: CB</p>
             </div>
           </div>
         </article>
@@ -187,5 +225,6 @@
     <footer>
         <p>&copy; Grant Messer</p>
     </footer>
+    <script src="./logic.js"></script>
 </body>
 </html>
