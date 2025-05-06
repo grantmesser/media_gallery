@@ -226,6 +226,14 @@ button {
 .info {
   display: none;
   transition: all 0.3s ease-in-out;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .info p {

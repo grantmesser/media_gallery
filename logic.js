@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const card = button.closest('.card');
         const info = card.querySelector('.info');
         if (info) {
-          info.style.display = (info.style.display === 'block') ? 'none' : 'block';
+          info.style.display = (info.style.display === 'flex') ? 'none' : 'flex';
         }
       });
     });
